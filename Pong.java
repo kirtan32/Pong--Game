@@ -1,5 +1,4 @@
 import java.awt.FlowLayout;
-import java.awt.image.BufferedImage;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -29,7 +28,8 @@ public class Pong extends JFrame {
 		// reads image and adds a label to the panel
 		JLabel pongBallLabel = new JLabel(new ImageIcon("Pongball.png"));
 		game.add(pongBallLabel);
-		
+		// adds label to the Frame
+		this.add(game);
 	}
 	
 	

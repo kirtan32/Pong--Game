@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
 import javax.swing.ImageIcon;
@@ -13,7 +14,7 @@ import javax.swing.JPanel;
  */
 
 public class Pong extends JFrame {
-	private static JFrame pong = new JFrame("Pong Game");
+	//private static JFrame pong = new JFrame("Pong Game");
 	
 	/*
 	 * Default Constructor that creates the JPanel which the is put on the JFrame
@@ -22,20 +23,20 @@ public class Pong extends JFrame {
 	public Pong(){
 		JPanel game	= new JPanel();
 		game.setLayout(new FlowLayout());
+		//game.setLayout(null);
 	
 		// reads pongball image and adds a label to the panel
 		JLabel pongBallLabel = new JLabel(new ImageIcon("Pongball.png"));
 		game.add(pongBallLabel);
-		// adds label to the Frame
-		this.add(game);
-		
+	
 		// reads player1 and player2 paddles and adds a label to the panel
 		JLabel player1Label = new JLabel(new ImageIcon("player1.png"));
 		game.add(player1Label);
-		this.add(game);
 		
 		JLabel player2Label =  new JLabel(new ImageIcon("player2.png"));
 		game.add(player2Label);
+		//player2Label.setLocation(40, 30);
+    	// adds all the labels to the frame
 		this.add(game);
 		
 	}

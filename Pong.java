@@ -21,6 +21,11 @@ public class Pong extends JFrame {
 	 * allows the paddles and ball to have something to be built on 
 	 */
 	public Pong(){
+		
+		// container
+		Container cont=getContentPane();
+		cont.setLayout(null);
+		// JPanel inside container
 		JPanel game	= new JPanel();
 		game.setLayout(new FlowLayout());
 		//game.setLayout(null);
@@ -37,8 +42,8 @@ public class Pong extends JFrame {
 		game.add(player2Label);
 		//player2Label.setLocation(40, 30);
     	// adds all the labels to the frame
-		this.add(game);
-		
+		cont.add(game);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	/*
